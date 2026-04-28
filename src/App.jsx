@@ -91,7 +91,7 @@ const TABS = [
 ]
 
 const FAQS = [
-  { q: 'Is this really AI? How does it look so real?', a: "Yes — every creator is entirely AI-generated. We use Higgsfield and Nano Banana for character visuals and HeyGen for lip-sync video. The result is indistinguishable from a real human creator. Patricia has 96,500 followers who interact with her as a real person." },
+  { q: 'Is this really AI? How does it look so real?', a: "Yes — every creator is entirely AI-generated. The result is indistinguishable from a real human creator. Patricia has 96,500 followers who interact with her as a real person." },
   { q: 'Who owns the account and the character?', a: "You do. The Instagram account, the character IP, all content — it all belongs to your brand. We build and manage it, but it's yours to keep, sell, or hand off at any time." },
   { q: 'How many videos do you post per week?', a: "Typically 3-5 videos per week depending on the package. We build a publishing cadence that maximizes platform algorithm favor without burning out the audience." },
   { q: 'What niches do you work in?', a: "We've built in travel, airport security, luxury hotels, and aviation. We can build in virtually any niche — finance, health, real estate, beauty, food, fitness, parenting. If there's an insider perspective, we can build a persona around it." },
@@ -178,7 +178,7 @@ function MagneticBtn({ href, children, large = false, dark = false }) {
       className="btn-primary font-display"
       style={{
         x: sx, y: sy,
-        display: 'inline-block', textDecoration: 'none', cursor: 'pointer',
+        display: 'inline-block', textDecoration: 'none', cursor: 'pointer', textAlign: 'center',
         background: dark ? 'rgba(255,255,255,0.09)' : ACCENT,
         color: dark ? '#fff' : '#080808',
         border: dark ? '1px solid rgba(255,255,255,0.16)' : 'none',
@@ -219,7 +219,7 @@ function Counter({ target, suffix = '' }) {
   const [count, setCount] = useState(0)
   const [done, setDone] = useState(false)
   const ref = useRef(null)
-  const inView = useInView(ref, { once: true, margin: '-60px' })
+  const inView = useInView(ref, { once: true, margin: '0px' })
   useEffect(() => {
     if (!inView) return
     const start = performance.now()
